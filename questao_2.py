@@ -21,6 +21,8 @@ while continuar:
     # Verificar se o sabor digitado é válido
     if sabor_desejado not in ("CP", "AC"):
         print("Sabor inválido, tente novamente.")
+        # Print vazio para quebrar linha
+        print()
         # Se o sabor for inválido, o "continue" irá reiniciar o loop
         continue
     
@@ -29,6 +31,8 @@ while continuar:
     # Verificar se o tamanho digitado é válido
     if tamanho_desejado not in ("P", "M", "G"):
         print("Tamanho inválido, tente novamente.")
+        # Print vazio para quebrar linha
+        print()
         # Se o sabor for inválido, o "continue" irá reiniciar o loop
         continue
     
@@ -60,12 +64,16 @@ while continuar:
     
     # Mensagem mostrando o sabor e tamanho escolhidos e o preço
     print(f"Você pediu um {sabor} tamanho {tamanho_desejado}: R${valor:.2f}")
+    # Print vazio para quebrar linha
+    print()
 
     # Valor do pedido sendo adicionado no valor total, assim é possível fazer mais de um e acumular
     valor_total += valor
     
     # Mensagem perguntando se deseja adicionar mais alguma coisa
     adicionar_algo = input("Deseja mais alguma coisa? (S/N): ").upper()
+    # Print vazio para quebrar linha
+    print()
     # Se sim, o "continue" faz o loop voltar ao início
     if adicionar_algo == "S":
         continue
@@ -77,4 +85,3 @@ while continuar:
     print(f"O valor total a ser pago: R${valor_total:.2f}")
     # Eu achei legal adicionar uma mensagem de agradecimento
     print("Obrigado pela compra e volte sempre!")
-    
